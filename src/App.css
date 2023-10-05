@@ -1,0 +1,26 @@
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.numbutton{
+  height:40px;
+  width:80px;
+  padding:2px;
+  margin:4px
+}
+.result{
+  color:red;
+  font-family:'Times New Roman';
+  font-size:30px;
+  font-weight:bold
+}
+.resultbutton{
+  height:30px;
+  width:80px;
+  background-color: black;
+  color:white;
+  border-radius: 10px;
+  border-width: 0px;
+}
