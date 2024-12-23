@@ -38,6 +38,7 @@ function App() {
       <button className='numbutton' onClick={()=>setInput("")}>CLR</button>
       </div>
       </div>
+      <h2>Calc by Akhilsai</h2>
     </div>
   );
 }
