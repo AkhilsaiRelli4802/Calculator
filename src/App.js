@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import './App.css';
+import { evaluate } from 'mathjs';
 
 function App() {
   const [input,setInput]=useState("");
@@ -7,9 +8,15 @@ function App() {
   const changingInput=(e)=>{
     setInput(e.target.value);
   }
-  const onResult=()=>{
-    setResult(eval(input))
-  }
+  const onResult = () => {
+    try {
+      // Using math.js to evaluate the expression safely
+      setResult(evaluate(input));
+    } catch (error) {
+      console.error("Invalid input:", error);
+      setResult('Error');
+    }
+  };
   return (
       <div className='container'>
       <input type="text" value={input} name="input" onChange={changingInput}/><br/>
